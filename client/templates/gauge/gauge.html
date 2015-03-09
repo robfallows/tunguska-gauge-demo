@@ -1,12 +1,46 @@
 <head>
   <title>TunguskaGauge Demo</title>
+  <style>
+    body {
+      background: #aaa;
+    }
+  </style>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0, width=device-width">
 </head>
 
 <body>
-  {{> gauge1 id="gauge1" style="basic"}}
+  {{> gauge1 id="demo1" style="basic"}}
+  {{> gauge2 id="demo2" style="steampunk"}}
+  {{> gauge3 id="demo3" style="rotary"}}
+  {{> gauge4 id="demo4" style="none"}}
+  {{> gauge5 id="demo5" style="clock"}}
 </body>
 
 <template name="gauge1">
-  <div id="gauge1" style="display:block;width:200px;height:200px;"></div>
+  <div id="demo1" style="display:inline-block;width:200px;height:200px;"></div>
 </template>
+
+<template name="gauge2">
+  <div style="display:inline-block;">
+    <div id="demo2" style="display:block;width:161px;height:161px;margin:19px;"></div>
+  </div>
+</template>
+
+<template name="gauge3">
+  <div style="display:inline-block;height:175px;background:#333;border-radius:5px;">
+    <div id="demo3" style="display:block;width:175px;height:90px;margin:0 5px;"></div>
+  </div>
+</template>
+
+<template name="gauge4">
+  <div style="display:inline-block;">
+    <div id="demo4" style="display:block;width:120px;height:120px;margin:0 40px;"></div>
+  </div>
+</template>
+
+<template name="gauge5">
+  <div style="display:inline-block;width:200px;height:200px;">
+    <div id="demo5" style="display:block;"></div>
+  </div>
+</template>
+
