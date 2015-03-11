@@ -2,13 +2,27 @@
   <title>TunguskaGauge Demo</title>
   <style>
     body {
-      background: #aaa;
+      background: #333;
+      color: #fff;
+      font-family:Calibri, Helvetica, Arial, Verdana, sans-serif;
+      font-size:16px;
+      line-height:30px;
+    }
+    a, a:link, a:hover, a:active, a:visited {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .outer {
+      display:inline-block;
+      width:200px;
+      height:200px;
     }
   </style>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0, width=device-width">
 </head>
 
 <body>
+  <div><a href="https://gist.github.com/robfallows/9bd0e199fcbcf456d607">See the gist</a> or <a href="https://github.com/robfallows/tunguska-gauge-demo">See the full repo</a></div>
   {{> gauge1 id="demo1" style="basic"}}
   {{> gauge2 id="demo2" style="steampunk"}}
   {{> gauge3 id="demo3" style="rotary"}}
@@ -17,29 +31,29 @@
 </body>
 
 <template name="gauge1">
-  <div id="demo1" style="display:inline-block;width:200px;height:200px;"></div>
+  <div id="demo1" class="outer"></div>
 </template>
 
 <template name="gauge2">
-  <div style="display:inline-block;">
+  <div class="outer">
     <div id="demo2" style="display:block;width:161px;height:161px;margin:19px;"></div>
   </div>
 </template>
 
 <template name="gauge3">
-  <div style="display:inline-block;height:175px;background:#333;border-radius:5px;">
+  <div class="outer">
     <div id="demo3" style="display:block;width:175px;height:90px;margin:0 5px;"></div>
   </div>
 </template>
 
 <template name="gauge4">
-  <div style="display:inline-block;">
-    <div id="demo4" style="display:block;width:120px;height:120px;margin:0 40px;"></div>
+  <div class="outer">
+    <div id="demo4" style="display:block;width:120px;height:120px;margin:40px;"></div>
   </div>
 </template>
 
 <template name="gauge5">
-  <div style="display:inline-block;width:200px;height:200px;">
+  <div class="outer">
     <div id="demo5" style="display:block;"></div>
   </div>
 </template>

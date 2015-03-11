@@ -2,7 +2,50 @@ Template.gauge1.rendered = function() {
   var self = this;
   self.gauge = new TunguskaGauge({
     id: self.data.id,
-    theme: self.data.style
+    theme: self.data.style,
+    range: {
+      colorBand: [{
+        startAt: 0.85,
+        endAt: 0.99,
+        from: 0,
+        to: 100,
+        color: '#ddd'
+      },{
+        startAt: 0.95,
+        endAt: 0.99,
+        from: 0,
+        to: 75,
+        color: '#0d0'
+      },{
+        startAt: 0.90,
+        endAt: 0.99,
+        from: 75,
+        to: 90,
+        color: '#ed0'
+      }, {
+        startAt: 0.85,
+        endAt: 0.99,
+        from: 90,
+        to: 100,
+        color: '#d00'
+      }]
+    },
+    tick: {
+      minor: {
+        color: 'black',
+      },
+      major: {
+        color: 'black',
+        legend: {
+          color: '#a9f',
+          font: '12px sans-serif',
+          radius: 0.72
+        }
+      }
+    },
+    digital: {
+      color: '#a9f'
+    },
   });
   Meteor.subscribe('current-gauge-data', function() {
     self.autorun(function() {
@@ -39,7 +82,7 @@ Template.gauge4.rendered = function() {
   self.gauge = new TunguskaGauge({
     id: self.data.id,
     theme: self.data.style,
-    radius: 1,
+    radius: 0.9,
     range: {
       min: -10,
       max: 20,
@@ -47,18 +90,18 @@ Template.gauge4.rendered = function() {
       sweep: -120
     },
     outer: {
-      lineWidth: 2,   
-      color: 'black', 
-      alpha: 0.7,     
+      lineWidth: 1,   
+      color: 'white', 
+      alpha: 1,     
       radius: 1       
     },
     tick: {
       minor: {
         lineWidth: 1,
-        startAt: 0.95,
+        startAt: 0.93,
         endAt: 0.99,
         interval: 5,
-        color: "black",
+        color: "white",
         alpha: 1
       },
       major: {
@@ -66,9 +109,9 @@ Template.gauge4.rendered = function() {
         startAt: 0.9,
         endAt: 0.99,
         interval: 10,
-        color: "black",
+        color: "white",
         legend: {
-          color: "black",
+          color: "white",
           font: '12px sans-serif',
           radius: 0.72
         },
@@ -82,9 +125,9 @@ Template.gauge4.rendered = function() {
         [1.05, -0.07]
       ],
       lineWidth: 1,
-      color: "skyblue",
+      color: "deepskyblue",
       alpha: 1,
-      fillColor: "skyblue",
+      fillColor: "deepskyblue",
       shadowX: 1,
       shadowY: 1,
       shadowBlur: 1,
@@ -151,7 +194,7 @@ Template.gauge5.rendered = function() {
       left: -69
     },  
     digital: {
-      color: '#00f'
+      color: 'dodgerblue'
     }
   });
   Meteor.setInterval(function() {
