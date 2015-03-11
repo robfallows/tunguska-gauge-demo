@@ -2,6 +2,10 @@
 
 A demo of five different themes in the tunguska:gauge-themes pack. Currently deployed to http://tunguska-gauge-demo.meteor.com.
 
+See also [tunguska:gauge](https://github.com/robfallows/tunguska-gauge)
+
+and [tunguska:gauge-themes](https://github.com/robfallows/tunguska-gauge-themes)
+
 # Licence
 
 The MIT License (MIT)
