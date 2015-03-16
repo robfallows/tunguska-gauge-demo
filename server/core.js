@@ -2,7 +2,7 @@ Meteor.publish('current-gauge-data', function() {
   var init = false;
   var self = this;
   Meteor.setInterval(function() {
-    var ran = Math.floor(Math.random() * 101);
+    var ran = Math.floor(Math.random() * 81);
     if (init) {
       self.changed('gauge-data', 'test', {value:ran});
     } else {

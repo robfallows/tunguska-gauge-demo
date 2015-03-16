@@ -4,35 +4,39 @@ Template.gauge1.rendered = function() {
     id: self.data.id,
     theme: self.data.style,
     range: {
+      max: 80,
+      sweep: 225,
       colorBand: [{
         startAt: 0.85,
         endAt: 0.99,
         from: 0,
-        to: 100,
-        color: '#ddd'
+        to: 80,
+        color: '#ccc'
       },{
         startAt: 0.95,
         endAt: 0.99,
         from: 0,
-        to: 75,
+        to: 60,
         color: '#0d0'
       },{
         startAt: 0.90,
         endAt: 0.99,
-        from: 75,
-        to: 90,
-        color: '#ed0'
+        from: 60,
+        to: 72,
+        color: '#cb0'
       }, {
         startAt: 0.85,
         endAt: 0.99,
-        from: 90,
-        to: 100,
+        from: 72,
+        to: 80,
         color: '#d00'
       }]
     },
     tick: {
       minor: {
         color: 'black',
+        first: 0,
+        last: 80
       },
       major: {
         color: 'black',
@@ -40,7 +44,9 @@ Template.gauge1.rendered = function() {
           color: '#a9f',
           font: '12px sans-serif',
           radius: 0.72
-        }
+        },
+        first: 0,
+        last: 80
       }
     },
     digital: {
