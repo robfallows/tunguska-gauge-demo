@@ -53,10 +53,9 @@ Template.gauge1.rendered = function() {
       color: '#a9f'
     },
   });
-  Meteor.subscribe('current-gauge-data', function() {
+  self.subscribe('current-gauge-data', function() {
     self.autorun(function() {
-      var ti = Template.instance();
-      ti.gauge.set(GaugeData.findOne({_id:'test'}).value);
+      self.gauge.set(GaugeData.findOne({_id:'test'}).value);
     });
   });
 }
