@@ -1,4 +1,4 @@
-Template.gauge1.rendered = function() {
+Template.gauge1.onRendered(function() {
   var self = this;
   self.gauge = new TunguskaGauge({
     id: self.data.id,
@@ -58,9 +58,9 @@ Template.gauge1.rendered = function() {
       self.gauge.set(GaugeData.findOne({_id:'test'}).value);
     });
   });
-}
+});
 
-Template.gauge2.rendered = function() {
+Template.gauge2.onRendered(function() {
   var self = this;
   self.gauge = new TunguskaGauge({
     id: self.data.id,
@@ -69,9 +69,9 @@ Template.gauge2.rendered = function() {
   Meteor.setInterval(function() {
     self.gauge.set(Math.floor(Math.random()*101));
   }, 1123);
-}
+});
 
-Template.gauge3.rendered = function() {
+Template.gauge3.onRendered(function() {
   var self = this;
   self.gauge = new TunguskaGauge({
     id: self.data.id,
@@ -80,9 +80,9 @@ Template.gauge3.rendered = function() {
   Meteor.setInterval(function() {
     self.gauge.set(Math.floor(Math.random()*101));
   }, 1234);
-}
+});
 
-Template.gauge4.rendered = function() {
+Template.gauge4.onRendered(function() {
   var self = this;
   self.gauge = new TunguskaGauge({
     id: self.data.id,
@@ -186,9 +186,9 @@ Template.gauge4.rendered = function() {
     a[1] = Math.max(a[1], a[2]);
     self.gauge.set(a);
   }, 1345);
-}
+});
 
-Template.gauge5.rendered = function() {
+Template.gauge5.onRendered(function() {
   var self = this;
   self.gauge = new TunguskaGauge({
     id: self.data.id,
@@ -206,4 +206,4 @@ Template.gauge5.rendered = function() {
     var d = new Date();
     self.gauge.set(d);
   }, 1000);
-}
+});
