@@ -53,6 +53,10 @@ Template.gauge1.onRendered(function() {
       color: '#a9f'
     },
   });
+  self.gauge.theme.pointer.dynamics = {
+    easing: 'easeOutQuint',
+    duration: 600
+  };
   self.subscribe('current-gauge-data', function() {
     self.autorun(function() {
       self.gauge.set(GaugeData.findOne({_id:'test'}).value);
