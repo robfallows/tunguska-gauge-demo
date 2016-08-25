@@ -1,6 +1,6 @@
 # Tunguska Gauge demo
 
-A demo of five different themes in the tunguska:gauge-themes pack. Currently deployed to http://tunguska-gauge-demo.meteor.com.
+A demo of five different themes in the tunguska:gauge-themes pack. Currently deployed to http://tunguska-gauge-demo.rompli.com/.
 
 See also [tunguska:gauge](https://github.com/robfallows/tunguska-gauge)
 
